@@ -1,0 +1,12 @@
+{
+  "name": "fcc-form-477",
+  "version": "1.0.0",
+  "description": "Produce form 477 data export file",
+  "main": "index.js",
+  "repository": "https://github.com/joefrance/fcc-form-477.git",
+  "author": "Joe France",
+  "license": "MIT",
+  "dependencies": {
+    "read-excel-file": "^5.0.0"
+  }
+}
