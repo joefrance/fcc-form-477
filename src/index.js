@@ -11,7 +11,9 @@ console.log(myArgs[0]);
 readXlsxFile(myArgs[0]).then((rows) => {
   // `rows` is an array of rows
   // each row being an array of cells.
-  console.log(rows);
+  for(var ix=0; ix < rows.length; ix++) {
+    console.log(rows[ix]);
+  }
 }).catch((reason) => {
     // `rows` is an array of rows
     // each row being an array of cells.

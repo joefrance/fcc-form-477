@@ -1,0 +1,25 @@
+{
+    "form477": {
+        "providers-dba-name": "Test Company",
+        "technology-of-transmission": "70",
+        "consumer": "1",
+        "maximum-downstream-consumer": 5.5,
+        "maximum-upstream-consumer": 5.5,
+        "business-government": "1"
+    },
+    "spreadsheetFormat": {
+        "firstRowContainsHeadings": false,
+        "fieldMappings": [
+            {
+                "firstname": 4,
+                "lastname": 5,
+                "name": 3,
+                "address1": 0,
+                "address2": null,
+                "city": 2,
+                "state": 6,
+                "zip": 7
+            }
+        ]    
+    }
+}
