@@ -4,8 +4,8 @@ The goal is to provide a base-line for reading an MS Excel(TM) file, producing a
 
 ### Quick Start
 
-`yarn install`
-`node ./src/index.js ./test.xlsx`
+- `yarn install`
+- `node ./src/index.js ./test.xlsx`
 
 Challenges:
 
@@ -25,5 +25,5 @@ Challenges:
 
 ### Resources
 
-[Fixed Broadband Deployment PDF](https://us-fcc.app.box.com/v/FBDFormatting)
-[More About Census Blocks](https://transition.fcc.gov/form477/Geo/more_about_census_blocks.pdf)
+- [Fixed Broadband Deployment PDF](https://us-fcc.app.box.com/v/FBDFormatting)
+- [More About Census Blocks](https://transition.fcc.gov/form477/Geo/more_about_census_blocks.pdf)
