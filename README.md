@@ -1,6 +1,11 @@
 # fcc-form-477
 
-The goal is to provide a base-line for reading an MS Excel(TM) file and produce a Form-477 text file
+The goal is to provide a base-line for reading an MS Excel(TM) file, producing a Form-477 text file.
+
+### Quick Start
+
+`yarn install`
+`node ./src/index.js ./test.xlsx`
 
 Challenges:
 
