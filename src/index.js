@@ -54,7 +54,7 @@ readXlsxFile(myArgs[0]).then((rows) => {
     stripNull(record.state).toLowerCase() !== 'tn'
     || record.censusBlock === ''
     || invalidBlockCodes.includes(record.censusBlock.toString())
-    //&& businessFlag === '0'
+    || businessFlag === '1'
 
     if(reject) {rejectedRecords.push(record); }
     else { acceptedRecords.push(record) }
@@ -79,11 +79,16 @@ readXlsxFile(myArgs[0]).then((rows) => {
     totalRecords: rows.length,
     uniqueAcceptedRecordsCount: uniqueAcceptedRecords.length,
     allUniqueBlockCodesCount: blockCodes.length,
-    rejectedRecordsRules: "record.state not in TN. record.censusBlock not blank and not invalid per 477 site.",
+    rejectedRecordsRules: "businessFlag = '1' (Don't include business). record.state not in TN. record.censusBlock not blank and not invalid per 477 site.",
     rejectedRecordsCount: rejectedRecords.length,
     invalidBlockCodesDescription: "These code blocks were marked as invalid by the 477 site and stored in the .invalid-block-codes.txt file. See .invalid-block-codes-sample.txt for example rejects from 477 site.",
     invalidBlockCodesCount: invalidBlockCodes.length,
     rejectedRecords: rejectedRecords.sort(function(a, b){
+      if(a.censusBlock < b.censusBlock) { return -1; }
+      if(a.censusBlock > b.censusBlock) { return 1; }
+      return 0;
+    }),
+    acceptedRecords: acceptedRecords.sort(function(a, b){
       if(a.censusBlock < b.censusBlock) { return -1; }
       if(a.censusBlock > b.censusBlock) { return 1; }
       return 0;

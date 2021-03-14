@@ -5,7 +5,7 @@
 
 .address-mapping.json
 .invalid-block-codes.txt
-.metrics.json
+.metrics*.json
 
 # User-specific files
 *.rsuser
